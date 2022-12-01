@@ -1,1 +1,79 @@
-Details will be shared here
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/dataTables.bootstrap.min.css">
+  <title>Tresna Foundation Event List</title>
+</head>
+<body>
+  <nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">
+        Tresna Foundation Event List
+      </a>
+    </div>
+  </div>
+</nav>
+<div class="container">
+  
+<table  id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+  <thead> 
+<tr>
+<td>Project</td>
+<td>Taluka</td>
+<td>District</td>
+<td>School / Village</td>
+<td>Beneficiary</td>
+<td>Web Page Link</td>
+<td>Album Link</td>
+</tr>
+  </thead>
+<tbody>
+<tr>
+    <td>Swabhiman</td>
+    <td>Khambhat</td>
+    <td>Anand</td>
+    <td>Haidarpura Prathmik Shala</td>
+    <td>32</td>
+    <td></td>
+    <td>https://photos.app.goo.gl/Sj3Y71kMxkLyq2vG8</td>
+</tr>
+
+</tbody>
+</table>
+
+</div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+    $('tr').each(function(){
+      $(this).find('td').each(function(){
+        var  t = $(this).text().replace(/\s+|\t/g,"")
+      if( t.includes('https://photos.app.goo.gl')){
+          $(this).html("<a href='"+t+"' class='btn btn-primary' target='_blank'>Search Now</a>")
+        }else if(t.includes('http://tresnafoundation.org/') ){
+          $(this).html("<a href='"+t+"' class='btn btn-success' target='_blank'>Learn More</a>")
+        }
+      })
+    })
+    $('#example').DataTable();
+});
+</script>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-113859707-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-113859707-1');
+</script>
+
+<br>
+
+<center>Powered by Encube Labs India</center>  
+</body>
+</html>
