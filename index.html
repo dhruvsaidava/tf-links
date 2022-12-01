@@ -36,7 +36,7 @@
     <td>Anand</td>
     <td>Haidarpura Prathmik Shala</td>
     <td>32</td>
-    <td></td>
+    <td>https://www.tresnafoundation.org/category/menstrual-awareness-camps/</td>
     <td>https://photos.app.goo.gl/Sj3Y71kMxkLyq2vG8</td>
 </tr>
 
@@ -53,9 +53,9 @@ $(document).ready(function() {
       $(this).find('td').each(function(){
         var  t = $(this).text().replace(/\s+|\t/g,"")
       if( t.includes('https://photos.app.goo.gl')){
-          $(this).html("<a href='"+t+"' class='btn btn-primary' target='_blank'>Search Now</a>")
+          $(this).html("<a href='"+t+"' class='btn btn-primary' target='_blank'>Album</a>")
         }else if(t.includes('http://tresnafoundation.org/') ){
-          $(this).html("<a href='"+t+"' class='btn btn-success' target='_blank'>Learn More</a>")
+          $(this).html("<a href='"+t+"' class='btn btn-success' target='_blank'>Read More</a>")
         }
       })
     })
@@ -74,6 +74,6 @@ $(document).ready(function() {
 
 <br>
 
-<center>Powered by Encube Labs India</center>  
+<center>Designed by Dhruv Saidava</center>  
 </body>
 </html>
